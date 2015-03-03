@@ -1,3 +1,4 @@
+var _ = require("sdk/l10n").get;
 /**
  * Initializes the popup panel UI depending on whether PB is active
  * for the current page.
@@ -19,7 +20,7 @@ function init(isActive)
   $("#badgerImg2").hide();
   $("#badgerImg").show();
   $("#badgerImg").hover(function () {
-    $("#detected").html("Click to deactivate Privacy Badger on this site.");
+    $("#detected").html(_('click_to_deactivate'));
   }, function () {
     $("#detected").html(trackerStatus);
   });
